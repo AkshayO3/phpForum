@@ -64,6 +64,7 @@ $id = $_GET['thread_id'];
 $sql = "SELECT * FROM `comments` WHERE `thread_id`=$id";
 $result = mysqli_query($conn, $sql);
 $noresult=true;
+$rx=mysqli_num_rows($result);
 if($rx>0){
 while ($row = mysqli_fetch_assoc($result)) {
     $noresult = false;
